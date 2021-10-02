@@ -30,7 +30,7 @@ variable "routing_rules" {
 }
 
 variable "versioning" {
-  type    = boolean
+  type    = bool
   default = false
 }
 
