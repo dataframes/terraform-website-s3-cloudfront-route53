@@ -47,6 +47,9 @@ resource "aws_s3_bucket" "website_bucket" {
     error_document = "404.html"
     routing_rules  = var.routing_rules
   }
+  versioning {
+    enabled = var.versioning
+  }
 
   //  logging {
   //    target_bucket = "${var.log_bucket}"
