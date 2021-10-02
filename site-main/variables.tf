@@ -29,6 +29,11 @@ variable "routing_rules" {
   default = ""
 }
 
+variable "versioning" {
+  type    = boolean
+  default = false
+}
+
 variable "default-root-object" {
   type    = string
   default = "index.html"
