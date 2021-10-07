@@ -132,11 +132,11 @@ resource "aws_cloudfront_distribution" "website_cdn" {
 
   default_cache_behavior {
     allowed_methods = ["GET", "HEAD", "OPTIONS"]
-    cached_methods  = ["GET", "HEAD"]
+    cached_methods  = ["GET", "HEAD", "OPTIONS"]
 
     forwarded_values {
       query_string = var.forward-query-string
-
+      headers      = ["Origin"]
       cookies {
         forward = "none"
       }
