@@ -59,10 +59,10 @@ resource "aws_s3_bucket" "website_bucket" {
     max_age_seconds = 3000
   }
 
-  //  logging {
-  //    target_bucket = "${var.log_bucket}"
-  //    target_prefix = "${var.log_bucket_prefix}"
-  //  }
+  logging {
+    target_bucket = "${var.log_bucket}"
+    target_prefix = "${var.log_bucket_prefix}"
+  }
 
   tags = local.tags
 }
