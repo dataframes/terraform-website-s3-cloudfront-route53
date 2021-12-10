@@ -34,6 +34,16 @@ variable "versioning" {
   default = false
 }
 
+variable "log_bucket" {
+  type    = string
+  default = ""
+}
+
+variable "log_bucket_prefix" {
+  type    = string
+  default = ""
+}
+
 variable "default-root-object" {
   type    = string
   default = "index.html"
